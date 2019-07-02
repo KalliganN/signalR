@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">	
+  <script src="signalr.min.js"></script>
+</head>
+<body>
+	 <p>
+		<button onclick="connect()">Connect</button> | <button onclick="disconnect()">Disconnect</button>
+	 </p>
+	 
+	 <p>
+		<button onclick="JoinFirstGroup()">JoinFirstGroup</button> | <button onclick="JoinSecondGroup()">JoinSecondGroup</button>
+	</p>
+	
+	<p>
+		<button onclick="SendGroupOneMessage()"> SendMessageToGroupOne</button> | <button onclick="SendGroupTwoMessage()"> SendMessageToGroupTwo</button> 
+	</p>
+	<textarea id="alltext" rows="10" cols="60"></textarea>
+	<p id="content"></p>
+	
+	
+
+<script>
+
+ connection = new signalR.HubConnectionBuilder()
+        // the url in which the server starts up on + the "chathub" which we conigured in startup.cs
+       .withUrl("https://localhost:44394/chathub")    
+       .build();
+	   
+	function connect() {		
+
+       connection.start({ withCredentials: false }).then(function () {console.log("connected");});
+	   
+	   // This means that when the server does "Clients.Group(groupName).SendCoreAsync(ReceiveGroupMessage)"
+	   // it calls ReceiveGroupMessage here in javascript
+	   // We will recieve all group messages for groups that we are apart off
+	   connection.on("ReceiveGroupMessage", (msg) => { ReceiveGroupMessage(msg); })
+	}
+	
+	function ReceiveGroupMessage(message) {
+	document.getElementById("alltext").value += message; 	   
+	}
+	
+	function SendGroupOneMessage()
+	{
+	  // We need to find a way to get the users name and group dynamically instead of hardcoding.
+	  connection.invoke("SendMessageToGroup", "User1", "FirstGroup", "This Message is for the first group");
+	}
+	
+	function SendGroupTwoMessage()
+	{
+	  // We need to find a way to get the users name and group dynamically instead of hardcoding.
+	  connection.invoke("SendMessageToGroup", "User1", "SecondGroup", "This Message is for the second group");
+	}
+
+	function disconnect() {
+		connection.stop();
+	}
+	
+	function JoinFirstGroup() {
+	    // we join a group, again we are hard coding, need to make dynamic
+		connection.invoke("JoinGroup", "FirstGroup");
+	}
+	
+	function JoinSecondGroup() {
+	// we join a group, again we are hard coding, need to make dynamic
+		connection.invoke("JoinGroup", "SecondGroup");
+	}
+	
+	
+</script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+C:\Users\kalliganna\Documents\Visual Studio 2017\Projects\wschu\wschu\bin\Debug\netcoreapp2.1\wschu.deps.json
+C:\Users\kalliganna\Documents\Visual Studio 2017\Projects\wschu\wschu\bin\Debug\netcoreapp2.1\wschu.runtimeconfig.json
+C:\Users\kalliganna\Documents\Visual Studio 2017\Projects\wschu\wschu\bin\Debug\netcoreapp2.1\wschu.runtimeconfig.dev.json
+C:\Users\kalliganna\Documents\Visual Studio 2017\Projects\wschu\wschu\bin\Debug\netcoreapp2.1\wschu.dll
+C:\Users\kalliganna\Documents\Visual Studio 2017\Projects\wschu\wschu\bin\Debug\netcoreapp2.1\wschu.pdb
+C:\Users\kalliganna\Documents\Visual Studio 2017\Projects\wschu\wschu\obj\Debug\netcoreapp2.1\wschu.csprojAssemblyReference.cache
+C:\Users\kalliganna\Documents\Visual Studio 2017\Projects\wschu\wschu\obj\Debug\netcoreapp2.1\wschu.csproj.CoreCompileInputs.cache
+C:\Users\kalliganna\Documents\Visual Studio 2017\Projects\wschu\wschu\obj\Debug\netcoreapp2.1\wschu.RazorAssemblyInfo.cache
+C:\Users\kalliganna\Documents\Visual Studio 2017\Projects\wschu\wschu\obj\Debug\netcoreapp2.1\wschu.RazorAssemblyInfo.cs
+C:\Users\kalliganna\Documents\Visual Studio 2017\Projects\wschu\wschu\obj\Debug\netcoreapp2.1\wschu.AssemblyInfoInputs.cache
+C:\Users\kalliganna\Documents\Visual Studio 2017\Projects\wschu\wschu\obj\Debug\netcoreapp2.1\wschu.AssemblyInfo.cs
+C:\Users\kalliganna\Documents\Visual Studio 2017\Projects\wschu\wschu\obj\Debug\netcoreapp2.1\wschu.RazorTargetAssemblyInfo.cache
+C:\Users\kalliganna\Documents\Visual Studio 2017\Projects\wschu\wschu\obj\Debug\netcoreapp2.1\wschu.dll
+C:\Users\kalliganna\Documents\Visual Studio 2017\Projects\wschu\wschu\obj\Debug\netcoreapp2.1\wschu.pdb
